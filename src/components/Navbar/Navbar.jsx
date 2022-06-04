@@ -14,6 +14,15 @@ const Navbar = (props) => {
         <div>
             <NavLink exact to='/messages'>Dialogs</NavLink>
         </div>
+        <div>
+            <NavLink exact to='/news'>News</NavLink>
+        </div>
+        <div>
+            <NavLink exact to='/music'>Music</NavLink>
+        </div>
+        <div>
+            <NavLink exact to='/settings'>Settings</NavLink>
+        </div>
     </nav>
   );
 };
