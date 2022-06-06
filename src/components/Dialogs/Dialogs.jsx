@@ -9,40 +9,28 @@ const DialogsItem = (props) => {
         </div>
     );
 };
+const Messages = (props) => {
+    return (
+        <div className={cl.message}>
+            {props.message}
+        </div>
+    );
+};
 
 const Dialogs = (props) => {
     return (
         <div className={cl.dialogs}>
             <div className={cl.dialogsItems}>
                 <DialogsItem name='Daniil' id='1'/>
-                <DialogsItem name='Daniil' id='2'/>
-                <DialogsItem name='Daniil' id='3'/>
-                <DialogsItem name='Daniil' id='4'/>
-                <DialogsItem name='Daniil' id='5'/>
-                <div className={cl.dialog}>
-                    <NavLink to='/messages/2'>Dima</NavLink>
-                </div>
-                <div className={cl.dialog}>
-                    <NavLink to='/messages/3'>Daniel</NavLink>
-                </div>
-                <div className={cl.dialog}>
-                    <NavLink to='/messages/4'>Ivan</NavLink>
-                </div>
-                <div className={cl.dialog}>
-                    <NavLink to='/messages/5'>Arseniy</NavLink>
-                </div>
+                <DialogsItem name='Dima' id='2'/>
+                <DialogsItem name='Daniel' id='3'/>
+                <DialogsItem name='Ivan' id='4'/>
+                <DialogsItem name='Arseniy' id='5'/>
             </div>
             <div className={cl.messages}>
-                <div className={cl.message}>
-                    Hello!
-                </div>
-                <div className={cl.message}>
-                    How are you?
-                </div>
-                <div className={cl.message}>
-                    I am nice!
-                </div>
-
+                <Messages message='Hello!' />
+                <Messages message='How are you?' />
+                <Messages message='I am nice!' />
             </div>
         </div>
     );
