@@ -4,7 +4,7 @@ import cl from "./Post.module.css";
 
 const Post = (props) => {
   return (
-    <div>
+    <div className={cl.posts}>
       <div>
         <img
           src="https://sun9-15.userapi.com/s/v1/if2/RqFaebfWu7K8Tcx9vOiBFQMJhH3klxDdrRhzlObjdCp5V7bd8AlYpLN-bLl1bL6quiBCxTlh4I-OSv4NYG_952Rp.jpg?size=1280x848&quality=96&type=album"

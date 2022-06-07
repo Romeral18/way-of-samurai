@@ -7,7 +7,9 @@ const MyPosts = () => {
   return (
     <div className={cl.newPosts}>
       <textarea name="post" id="" cols="15" rows="5"></textarea>
-      <button>Add</button>
+      <div>
+        <button>Add</button>
+      </div>
       <Post messange="Hi, how are you?" likes="15" />
       <Post messange="Let's go dance!" likes="1000" />
     </div>
