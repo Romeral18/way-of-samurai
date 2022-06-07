@@ -3,32 +3,43 @@ import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile'
 import Dialogs from './components/Dialogs/Dialogs'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import Settings from './components/Settings/Settings'
-import Music from './components/Music/Music'
 import News from './components/News/News'
 
+// Single Responsibility ( S in SOLID )
+// DRY - don't repeat yourself
+// KISS - keep it simple stupid
+
+const links = [
+    {href: '/profile', name: 'profile'},
+    {href: '/dialogs', name: 'dialogs'},
+    {href: '/news', name: 'news'},
+    {href: '/settings', name: 'settings'},
+]
+const components = {
+    profile: Profile,
+    dialogs: Dialogs,
+    news: News,
+    settings: Settings,
+}
 
 function App() {
     return (
-        <BrowserRouter>
-            <div className="app-wrapper">
-                <Header/>
-                <Navbar/>
-                <div className="app-wrapper-content">
-
-                    <Switch>
-                        <Route path="/profile" component={Profile}/>
-                        <Route path="/messages" component={Dialogs}/>
-                        <Route path="/news" component={News}/>
-                        <Route path="/music" component={Music}/>
-                        <Route path="/settings" component={Settings}/>
-                    </Switch>
-
-                </div>
+        <div className="app-wrapper">
+            <Header/>
+            <Navbar links={links}/>
+            <div className="app-wrapper-content">
+                <Switch>
+                    <Routes links={links}/>
+                </Switch>
             </div>
-        </BrowserRouter>
+        </div>
     )
 }
 
 export default App
+
+const Routes = ({links}) => {
+    return links.map( link => <Route path={link.href} component={components[link.name]}/>)
+}
