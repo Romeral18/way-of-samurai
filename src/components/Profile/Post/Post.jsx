@@ -11,7 +11,7 @@ const Post = (props) => {
           alt=""
           className={style.avatar}
         />
-        {props.messange}
+        {props.message}
       </div>
       <div>Likes: {props.likes}</div>
     </div>
