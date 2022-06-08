@@ -3,6 +3,16 @@ import "./MyPosts.module.scss";
 import style from "./MyPosts.module.scss";
 import Post from "../Post/Post";
 
+const posts = [
+    {message: 'Hi, how are you?', likes: '15'},
+    {message: "Let's go dance!", likes: '1000'},
+    {message: "Let's go dance!", likes: '1000'},
+    {message: "Let's go dance!", likes: '1000'},
+    {message: "Let's go dance!", likes: '1000'}
+]
+const postElements = posts.map( p => (<Post message={p.message} likes={p.likes} />));
+
+
 const MyPosts = () => {
   return (
     <div className={style.newPosts}>
@@ -10,8 +20,7 @@ const MyPosts = () => {
       <div>
         <button>Add</button>
       </div>
-      <Post messange="Hi, how are you?" likes="15" />
-      <Post messange="Let's go dance!" likes="1000" />
+        {postElements}
     </div>
   );
 };
