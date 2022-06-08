@@ -1,16 +1,11 @@
 import React from "react";
 import "./MyPosts.module.scss";
 import style from "./MyPosts.module.scss";
-import Post from "../Post/Post";
+import Posts from "./Posts/Posts";
+import posts from "./../Profile";
 
-const posts = [
-    {message: "Hi, how are you?", likes: "15"},
-    {message: "Let's go dance!", likes: "1000"},
-    {message: "Let's go dance!", likes: "1000"},
-    {message: "Let's go dance!", likes: "1000"},
-    {message: "Let's go dance!", likes: "1000"}
-]
-const postElements = posts.map( p => (<Post message={p.message} likes={p.likes} />));
+
+const postElements = posts.map( p => (<Posts message={p.message} likes={p.likes} />));
 
 
 const MyPosts = () => {

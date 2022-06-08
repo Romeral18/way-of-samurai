@@ -1,8 +1,8 @@
 import React from "react";
-import "./Post.module.scss";
-import style from "./Post.module.scss";
+import "./Posts.module.scss";
+import style from "./Posts.module.scss";
 
-const Post = (props) => {
+const Posts = (props) => {
   return (
     <div className={style.posts}>
       <div>
@@ -17,4 +17,4 @@ const Post = (props) => {
     </div>
   );
 };
-export default Post;
+export default Posts;
