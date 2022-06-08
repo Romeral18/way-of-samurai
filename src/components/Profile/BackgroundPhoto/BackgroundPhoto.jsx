@@ -1,6 +1,6 @@
 import React from "react";
-import "./BackgroundPhoto.module.css";
-import cl from "./BackgroundPhoto.module.css";
+import "./BackgroundPhoto.module.scss";
+import style from "./BackgroundPhoto.module.scss";
 
 const BackgroundPhoto = () => {
   return (
@@ -8,7 +8,7 @@ const BackgroundPhoto = () => {
       <img
         src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
         alt=""
-        className={cl.backgroundPhoto}
+        className={style.backgroundPhoto}
       />
     </div>
   );

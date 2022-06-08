@@ -1,11 +1,11 @@
 import React from "react";
-import "./MyPosts.module.css";
-import cl from "./MyPosts.module.css";
+import "./MyPosts.module.scss";
+import style from "./MyPosts.module.scss";
 import Post from "../Post/Post";
 
 const MyPosts = () => {
   return (
-    <div className={cl.newPosts}>
+    <div className={style.newPosts}>
       <textarea name="post" id="" cols="15" rows="5"></textarea>
       <div>
         <button>Add</button>

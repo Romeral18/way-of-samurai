@@ -1,5 +1,5 @@
 import React from 'react'
-import './Profile.module.css'
+import './Profile.module.scss'
 import MyPosts from './MyPosts/MyPosts'
 import BackgroundPhoto from './BackgroundPhoto/BackgroundPhoto'
 import Cap from './Cap/Cap'

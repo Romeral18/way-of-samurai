@@ -1,10 +1,10 @@
 import React from "react";
-import "./Header.module.css";
-import cl from "./Header.module.css";
+import "./Header.module.scss";
+import style from "./Header.module.scss";
 
 const Header = (props) => {
   return (
-    <header className={cl.header}>
+    <header className={style.header}>
       <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" alt="" />
     </header>
   );

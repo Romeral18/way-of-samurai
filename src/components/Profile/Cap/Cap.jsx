@@ -1,8 +1,8 @@
 import React from "react";
-import "./Cap.module.css";
-import cl from "./Cap.module.css";
+import "./Cap.module.scss";
+import style from "./Cap.module.scss";
 
 const Cap = () => {
-  return <div className={cl.cap}>ava + description</div>;
+  return <div className={style.cap}>ava + description</div>;
 };
 export default Cap;
