@@ -18,12 +18,24 @@ const posts = [
     {message: "Let's go dance!", likes: "1000"},
     {message: "Let's go dance!", likes: "1000"}
 ]
+const dialogs = [
+    {id: 1, name: 'Daniil'},
+    {id: 2, name: 'Dima'},
+    {id: 3, name: 'Daniel'},
+    {id: 4, name: 'Ivan'},
+    {id: 5, name: 'Arseniy'}
+];
+const messages = [
+    {id: 1, message: 'Hello!'},
+    {id: 2, message: 'How are you?'},
+    {id: 3, message: 'I am nice!'},
+];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App links={links} posts={posts}/>
+            <App links={links} posts={posts} dialogs={dialogs} messages={messages}/>
         </BrowserRouter>
     </React.StrictMode>
 );

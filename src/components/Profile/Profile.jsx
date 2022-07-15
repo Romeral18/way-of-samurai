@@ -9,7 +9,6 @@ import Cap from './Cap/Cap'
 const Profile = (props) => {
   return (
     <div>
-        done
       <BackgroundPhoto />
       <Cap />
       <MyPosts posts={props.posts} />

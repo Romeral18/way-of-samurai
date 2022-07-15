@@ -21,10 +21,10 @@ function App (props) {
             <Navbar links={props.links}/>
             <div className="app-wrapper-content">
                 <Switch>
-                    <Route path='/profile' component={() => <Profile posts={props.posts}/>}/>
-                    <Route path='/dialogs' component={() => <Dialogs/>}/>
-                    <Route path='/news' component={() => <News/>}/>
-                    <Route path='/settings' component={() => <Settings/>}/>
+                    <Route path='/profile' render={() => <Profile posts={props.posts}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
+                    <Route path='/news' render={() => <News/>}/>
+                    <Route path='/settings' render={() => <Settings/>}/>
                 </Switch>
             </div>
         </div>
