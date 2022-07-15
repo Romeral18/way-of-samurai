@@ -18,8 +18,9 @@ const Profile = () => {
         done
       <BackgroundPhoto />
       <Cap />
-      <MyPosts />
+      <MyPosts posts={posts} />
     </div>
   );
 };
 export default Profile;
+
