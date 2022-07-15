@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './Dialogs.module.scss'
-import DialogsItem from './DialogsItem/Dialogs'
+import DialogsItem from './DialogsItem/DialogItem'
 import Messages from './Messages/Messages'
 
 

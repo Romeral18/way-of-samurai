@@ -1,0 +1,17 @@
+.nav {
+  grid-area: n;
+  background-color: wheat;
+  padding: 20px;
+}
+
+.item > a {
+  color: saddlebrown;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.item > a:hover {
+  color: aquamarine;
+}
+.item > a:focus {
+  color: red;
+}
