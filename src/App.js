@@ -11,27 +11,20 @@ import News from './components/News/News'
 // DRY - don't repeat yourself
 // KISS - keep it simple stupid
 
-const links = [
-    {href: '/profile', name: 'profile'},
-    {href: '/dialogs', name: 'dialogs'},
-    {href: '/news', name: 'news'},
-    {href: '/settings', name: 'settings'},
-]
-const components = {
-    profile: Profile,
-    dialogs: Dialogs,
-    news: News,
-    settings: Settings,
-}
 
-function App() {
+
+
+function App (props) {
     return (
         <div className="app-wrapper">
             <Header/>
-            <Navbar links={links}/>
+            <Navbar links={props.links}/>
             <div className="app-wrapper-content">
                 <Switch>
-                    <Routes links={links}/>
+                    <Route path='/profile' component={() => <Profile posts={props.posts}/>}/>
+                    <Route path='/dialogs' component={() => <Dialogs/>}/>
+                    <Route path='/news' component={() => <News/>}/>
+                    <Route path='/settings' component={() => <Settings/>}/>
                 </Switch>
             </div>
         </div>
@@ -40,6 +33,3 @@ function App() {
 
 export default App
 
-const Routes = ({links}) => {
-    return links.map( link => <Route path={link.href} component={components[link.name]}/>)
-}

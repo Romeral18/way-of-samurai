@@ -3,9 +3,6 @@ import style from './Dialogs.module.scss'
 import DialogsItem from './DialogsItem/DialogItem'
 import Messages from './Messages/Messages'
 
-
-
-
 const dialogs = [
     {id: 1, name: 'Daniil'},
     {id: 2, name: 'Dima'},
