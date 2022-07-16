@@ -4,38 +4,15 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import {BrowserRouter} from "react-router-dom";
+import state from './redux/state';
 
-const links = [
-    {href: '/profile', name: 'profile'},
-    {href: '/dialogs', name: 'dialogs'},
-    {href: '/news', name: 'news'},
-    {href: '/settings', name: 'settings'},
-]
-const posts = [
-    {message: "Hi, how are you?", likes: "15"},
-    {message: "Let's go dance!", likes: "1000"},
-    {message: "Let's go dance!", likes: "1000"},
-    {message: "Let's go dance!", likes: "1000"},
-    {message: "Let's go dance!", likes: "1000"}
-]
-const dialogs = [
-    {id: 1, name: 'Daniil'},
-    {id: 2, name: 'Dima'},
-    {id: 3, name: 'Daniel'},
-    {id: 4, name: 'Ivan'},
-    {id: 5, name: 'Arseniy'}
-];
-const messages = [
-    {id: 1, message: 'Hello!'},
-    {id: 2, message: 'How are you?'},
-    {id: 3, message: 'I am nice!'},
-];
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App links={links} posts={posts} dialogs={dialogs} messages={messages}/>
+            <App state={state}/>
         </BrowserRouter>
     </React.StrictMode>
 );
