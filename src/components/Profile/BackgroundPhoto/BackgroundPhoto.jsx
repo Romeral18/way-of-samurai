@@ -6,7 +6,7 @@ const BackgroundPhoto = () => {
   return (
     <div>
       <img
-        src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
+        src="https://funart.pro/uploads/posts/2021-04/thumbs/1618562540_9-funart_pro-p-oboi-fon-estetichnii-fon-bezhevii-9.jpg"
         alt=""
         className={style.backgroundPhoto}
       />
