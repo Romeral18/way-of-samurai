@@ -21,7 +21,7 @@ function App (props) {
             <Navbar links={props.state.staticPages.links}/>
             <div className="app-wrapper-content">
                 <Switch>
-                    <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts}/>}/>
+                    <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts} addPost={props.addPost}/>}/>
                     <Route path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs} messages={props.state.dialogsPage.messages}/>}/>
                     <Route path='/news' render={() => <News/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
