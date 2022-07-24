@@ -7,13 +7,17 @@ let state = {
         {href: '/news', name: 'news'},
         {href: '/settings', name: 'settings'},
     ]},
-    profilePage: {posts: [
+    profilePage: {
+        posts: [
         {message: "Hi, how are you?", likes: "15"},
         {message: "Let's go dance!", likes: "1000"},
         {message: "Let's go dance!", likes: "1000"},
         {message: "Let's go dance!", likes: "1000"},
         {message: "Let's go dance!", likes: "1000"}
-    ]},
+
+    ],
+        newPostText: 'YoYoYo'
+    },
     dialogsPage: {
         dialogs: [
         {id: 1, name: 'Daniil'},
@@ -31,14 +35,20 @@ let state = {
 
 
 
-export let addPost = (postMessage) => {
+export const addPost = () => {
     let newPost = {
         id:5,
-        message:postMessage,
+        message:props.profilePage.newPostText,
         likes: 0
     };
     state.profilePage.posts.push(newPost);
     rerenderEntireTree(state);
 };
+export const updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+
+}
+
 
 export default state;
