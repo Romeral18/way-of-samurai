@@ -15,7 +15,7 @@ let state = {
         {message: "Let's go dance!", likes: "1000"},
         {message: "Let's go dance!", likes: "1000"}
 
-    ],
+        ],
         newPostText: 'YoYoYo'
     },
     dialogsPage: {
@@ -36,19 +36,18 @@ let state = {
 
 
 export const addPost = () => {
-    let newPost = {
+    const newPost = {
         id:5,
-        message:props.profilePage.newPostText,
+        message: state.profilePage.newPostText,
         likes: 0
     };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
     rerenderEntireTree(state);
 };
 export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     rerenderEntireTree(state);
-
 }
-
 
 export default state;
