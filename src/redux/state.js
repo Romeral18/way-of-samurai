@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
     staticPages: {links: [
         {href: '/profile', name: 'profile'},
@@ -36,6 +38,7 @@ export let addPost = (postMessage) => {
         likes: 0
     };
     state.profilePage.posts.push(newPost);
+    rerenderEntireTree(state);
 };
 
 export default state;
